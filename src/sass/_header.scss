@@ -1,0 +1,93 @@
+$header-text: #3a494c;
+$menu-link: #035d6e;
+
+.header {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  @media (min-width: 768px) {
+    position: fixed;
+  }
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  &::before {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+.logotype  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  @media (max-width: 767px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.logo-text {
+  font-family: BreeSerifR;
+  font-size: 1.5rem;
+  display: block;
+  text-transform: uppercase;
+  color: $header-text;
+  margin-left: 1rem;
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
+}
+
+// NAVIGATION
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
+}
+
+.navigation__item {
+  position: relative;
+  text-align: center;
+  &:hover .submenu {
+    display: block;
+  }
+}
+
+.navigation__link {
+  display: block;
+  font-family: MyriadProR;
+  font-size: 1rem;
+  text-decoration: none;
+  color: $menu-link;
+  line-height: 2;
+  @media (min-width: 1024px) {
+    font-size: 1.125rem;
+  }
+}
+
+// STYLES FOR SUBMENU
+.submenu {
+  display: none;
+  text-align: center;
+  @media (min-width: 768px) {
+    position: absolute;
+  }
+}
+
+.submenu__link {
+  display: block;
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: $menu-link;
+  line-height: 1.5;
+}
