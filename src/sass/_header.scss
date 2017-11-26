@@ -3,8 +3,6 @@ $menu-link: #035d6e;
 
 .header {
   padding: 2rem 0;
-  display: flex;
-  justify-content: center;
   @media (min-width: 768px) {
     position: fixed;
   }
