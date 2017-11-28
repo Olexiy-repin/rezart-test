@@ -1,0 +1,119 @@
+<section class="portfolio-section" id="portfolio">
+  <div class="container">
+    <div class="row mb-2">
+      <div class="grid_6 preffix_3">
+        <div class="title-container">
+          <h2 class="title-container__title">recent templates</h2>
+          <p class="title-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, optio?</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="grid_6 preffix_3">
+        <div class="tabs">
+          <button class="tabs__link" id="active" onclick="openTab(event, 'duo')">duo eu</button>
+          <button class="tabs__link" onclick="openTab(event, 'noster')">noster</button>
+          <button class="tabs__link" onclick="openTab(event, 'quaeque')">quaeque</button>
+          <button class="tabs__link" onclick="openTab(event, 'delicata')">delicata</button>
+          <button class="tabs__link" onclick="openTab(event, 'aliquando')">aliquando</button>
+        </div>
+      </div>
+    </div>
+    <div class="row tabcontent mb-2" id="duo">
+      <div class="grid_4 mb-2">
+        <div class="gallery-img" onclick="openModal();currentSlide(1)">
+          <img src="img/portfolio/image-1.png" alt="" class="gallery-img__img">
+        </div>
+      </div>
+      <div class="grid_4 mb-2">
+        <div class="gallery-img" onclick="openModal();currentSlide(2)">
+          <img src="img/portfolio/image-2.png" alt="" class="gallery-img__img">
+        </div>
+      </div>
+      <div class="grid_4 mb-2">
+        <div class="gallery-img" onclick="openModal();currentSlide(3)">
+          <img src="img/portfolio/image-3.png" alt="" class="gallery-img__img" >
+        </div>
+      </div>
+      <div class="grid_4 mb-sm-2">
+        <div class="gallery-img" onclick="openModal();currentSlide(4)">
+          <img src="img/portfolio/image-4.png" alt="" class="gallery-img__img">
+        </div>
+      </div>
+
+      <div class="grid_4 mb-sm-2">
+        <div class="gallery-img" onclick="openModal();currentSlide(5)">
+          <img src="img/portfolio/image-5.png" alt="" class="gallery-img__img">
+        </div>
+      </div>
+
+      <div class="grid_4 mb-sm-2">
+        <div class="gallery-img" onclick="openModal();currentSlide(6)">
+          <img src="img/portfolio/image-6.png" alt="" class="gallery-img__img">
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img class="modal-img" src="img/portfolio/image-1.png">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img class="modal-img" src="img/portfolio/image-2.png">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img class="modal-img" src="img/portfolio/image-3.png">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img class="modal-img" src="img/portfolio/image-4.png">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img class="modal-img" src="img/portfolio/image-5.png">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img class="modal-img" src="img/portfolio/image-6.png" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabcontent" id="noster">
+      <h2 class="tabcontent__title">Noster</h2>
+      <p class="tabcontent__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, pariatur?</p>
+    </div>
+
+    <div class="tabcontent" id="quaeque">
+      <h2 class="tabcontent__title">quaeque</h2>
+      <p class="tabcontent__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, hic.</p>
+    </div>
+
+    <div class="tabcontent" id="delicata">
+      <h2 class="tabcontent__title">delicata</h2>
+      <p class="tabcontent__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, dicta.</p>
+    </div>
+
+    <div class="tabcontent" id="aliquando">
+      <h2 class="tabcontent__title">aliquando</h2>
+      <p class="tabcontent__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, perspiciatis.</p>
+    </div>
+    <div class="button-container">
+      <div class="button-container__button">show more</div>
+    </div>
+  </div>
+</section>

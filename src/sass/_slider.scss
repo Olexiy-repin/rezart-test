@@ -1,0 +1,121 @@
+.slider {
+  position: relative;
+}
+
+%slide {
+  padding: 4rem 0 8rem 0;
+}
+
+.slider__slide-1 {
+  @extend %slide;
+  background-image: url("img/slider/slide-1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider__slide-2 {
+  @extend %slide;
+  background-image: url("img/slider/slide-2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider__slide-3 {
+  @extend %slide;
+  background-image: url("img/slider/slide-3.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider__title {
+  width: 40%;
+  font-family: BreeSerifR;
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.slider__paragraph {
+  width: 70%;
+  font-family: UbuntuR;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+// BUTTON
+.slider__button {
+  position: relative;
+  font-family: BreeSerifR;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #3a494c;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: 6%;
+}
+
+.slider__button-popup {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 125%;
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: .5rem 1rem;
+  border-radius: 6%;
+  opacity: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 1s;
+}
+
+// DOTS
+.slider__dots {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  cursor: pointer;
+  margin-right: .5rem;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.slider__dot--hover {
+  background-color: #fff;
+}
