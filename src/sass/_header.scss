@@ -2,6 +2,11 @@ $header-text: #3a494c;
 $menu-link: #035d6e;
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
   padding: 2rem 0;
   &::after {
     clear: both;
@@ -26,9 +31,6 @@ $menu-link: #035d6e;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  @media (max-width: 767px) {
-    margin-bottom: 2rem;
-  }
 }
 
 

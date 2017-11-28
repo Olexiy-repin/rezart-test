@@ -1,6 +1,6 @@
 <section class="portfolio-section" id="portfolio">
   <div class="container">
-    <div class="row mb-2">
+    <div class="row mb-3 mb-sm-2">
       <div class="grid_6 preffix_3">
         <div class="title-container">
           <h2 class="title-container__title">recent templates</h2>
@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <div class="row mb-2">
+    <div class="row mb-3 mb-sm-2">
       <div class="grid_6 preffix_3">
         <div class="tabs">
           <button class="tabs__link" id="active" onclick="openTab(event, 'duo')">duo eu</button>
@@ -59,32 +59,32 @@
 
           <div class="mySlides">
             <div class="numbertext">1 / 6</div>
-            <img class="modal-img" src="img/portfolio/image-1.png">
+            <img class="modal-img" src="img/portfolio/image-1.png" alt="portfolio image">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">2 / 6</div>
-            <img class="modal-img" src="img/portfolio/image-2.png">
+            <img class="modal-img" src="img/portfolio/image-2.png" alt="portfolio image">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">3 / 6</div>
-            <img class="modal-img" src="img/portfolio/image-3.png">
+            <img class="modal-img" src="img/portfolio/image-3.png" alt="portfolio image">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">4 / 6</div>
-            <img class="modal-img" src="img/portfolio/image-4.png">
+            <img class="modal-img" src="img/portfolio/image-4.png" alt="portfolio image">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">5 / 6</div>
-            <img class="modal-img" src="img/portfolio/image-5.png">
+            <img class="modal-img" src="img/portfolio/image-5.png" alt="portfolio image">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">6 / 6</div>
-            <img class="modal-img" src="img/portfolio/image-6.png" style="width:100%">
+            <img class="modal-img" src="img/portfolio/image-6.png" alt="portfolio image">
           </div>
 
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -113,7 +113,10 @@
       <p class="tabcontent__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, perspiciatis.</p>
     </div>
     <div class="button-container">
-      <div class="button-container__button">show more</div>
+      <div class="button-container__button" id="accordion" onclick="accordion()">show more</div>
+      <div class="panel" id="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eius nulla consequuntur sapiente obcaecati quaerat deleniti molestias voluptatum perferendis, distinctio, illo dolore sit quas dignissimos dolorum repudiandae quibusdam dolorem eligendi ducimus aliquam officia reprehenderit impedit rem. Distinctio dolorem fugiat eaque.</p>
+      </div>
     </div>
   </div>
 </section>

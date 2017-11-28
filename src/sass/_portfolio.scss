@@ -1,4 +1,5 @@
 $portfolio-bg: #98d2a4;
+$portfolio-button: #3a494c;
 
 .portfolio-section {
   padding: 4rem 0;
@@ -95,15 +96,6 @@ $portfolio-bg: #98d2a4;
 }
 
 // GALLERY
-.mb-2 {
-  margin-bottom: 2rem;
-}
-@media (max-width: 768px) {
-  .mb-sm-2 {
-    margin-bottom: 2rem;
-  }
-}
-
 .gallery-img {
   position: relative;
 
@@ -168,13 +160,16 @@ $portfolio-bg: #98d2a4;
   right: 2rem;
   font-size: 2rem;
   font-weight: bold;
-}
-
-.close:focus,
-.close:hover {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
+  &:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &:hover {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .mySlides {
@@ -185,31 +180,33 @@ $portfolio-bg: #98d2a4;
   cursor: pointer;
 }
 
-.next,
-.prev {
+%arrows {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
-  margin-top: -50px;
+  padding: 1rem;
+  margin-top: -3rem;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.5rem;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
 }
 
+.next,
+.prev {
+  @extend %arrows;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
-
-.next:hover,
-.prev:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .numbertext {
@@ -221,7 +218,8 @@ $portfolio-bg: #98d2a4;
 // BUTTON
 .button-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button-container__button {
@@ -230,7 +228,23 @@ $portfolio-bg: #98d2a4;
   text-transform: uppercase;
   background-color: #fff;
   padding: 0.5rem 1rem;
+  cursor: pointer;
   @media (min-width: 1024px) {
     font-size: 1.25rem;
   }
+}
+
+.button-active {
+  background-color: $portfolio-button;
+  color: #fff;
+}
+
+.panel {
+  display: none;
+  font-family: UbuntuR;
+  background-color: #fff;
+  line-height: 2;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
 }

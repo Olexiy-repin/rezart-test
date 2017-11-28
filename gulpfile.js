@@ -42,6 +42,15 @@ gulp.task('css', function(){
       }));
 });
 
+// TASK FOR JS
+gulp.task('js', function(){
+  return gulp.src('./src/js/*.js')
+  .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
 // TASK FOR FOLDER COMPONENTS
 gulp.task('components', function(){
   return gulp.src('./src/sass/components/*.scss')
@@ -80,6 +89,7 @@ gulp.task('fonts', function(){
 gulp.task('watch', function(){
   gulp.watch('./src/html/**/*.html', ['html']);
   gulp.watch('./src/sass/**/*.scss', ['css']);
+  gulp.watch('./src/js/**/*.js', ['js']);
   gulp.watch('./src/sass/components/*.scss', ['components']);
   gulp.watch('./src/img/**/*.*', ['img']);
   gulp.watch('./src/fonts/**/*.*', ['fonts']);
@@ -101,7 +111,7 @@ gulp.task('del:dist', function(){
 });
 
 // BUILD TASK
-gulp.task('build', ['html', 'css', 'img', 'fonts']);
+gulp.task('build', ['html', 'css', 'js', 'img', 'fonts']);
 
 // START TASK
 gulp.task('start', ['del:dist', 'build', 'server', 'watch']);
