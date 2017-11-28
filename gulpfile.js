@@ -44,8 +44,8 @@ gulp.task('css', function(){
 
 // TASK FOR JS
 gulp.task('js', function(){
-  return gulp.src('./src/js/*.js')
-  .pipe(gulp.dest('./dist/js'))
+  return gulp.src('./src/js/main.js')
+  .pipe(gulp.dest('./dist'))
     .pipe(browserSync.reload({
       stream: true
     }));
